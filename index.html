@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/622b430d00.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="./filter.js"></script>
+    <link rel="icon" type="image/x-icon" href="book1.jpg">
+    <title>Library Management Website</title>
+</head>
+<body>
+    <section id="interface"> 
+        <div class="navigation" id="fixed-div">
+            <div class="search">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder=" Search">
+            </div>
+            <div class="logo">
+                <h4>Library Manager</h4>
+            </div>
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <img src="profileimg.jpg" alt="">
+            </div>
+        </div>
+        <h3 class="i-name">
+            DashBoard
+        </h3>
+        <div class="values">
+            <div class="val-box">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>8,945</h3>
+                    <span>Total Users</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>50+</h3>
+                    <span>Books</span>
+                </div>
+            </div>
+            <div class="val-box" id="spl">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3> Book Count: </h3>
+                    <span id="filtered-row-count">51</span>
+                </div>
+            </div>
+        </div>
+        <div class="board">
+            <table id="book-table" width="100%">
+                <thead>
+                    <th col-index = 1>Title
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all">All</option>
+                        </select>
+                    </th>
+                    <th col-index = 2>Author
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all">All</option>
+                        </select>
+                    </th>
+        
+                    <th col-index = 3>Department
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all">All</option>
+                        </select>
+                    </th>
+                    <th col-index = 4>Published Year
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all">All</option>
+                        </select>
+                    </th>
+                    <th col-index = 5>Availability
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all">All</option>
+                        </select>
+                    </th>
+                    
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Pride and Prejudice</td>
+                        <td>Jane Austen</td>
+                        <td>Classic</td>
+                        <td>1813</td>
+                        <td>Take it</td>
+                    </tr>
+
+                    <tr>
+                        <td>To Kill a Mockingbird</td>
+                        <td>Harper Lee</td>
+                        <td>Fiction</td>
+                        <td>1960</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Catcher in the Rye</td>
+                        <td>J.D. Salinger</td>
+                        <td>Coming-of-Age</td>
+                        <td>1951</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>To the Lighthouse</td>
+                        <td>Virginia Woolf</td>
+                        <td>Modernist</td>
+                        <td>1927</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Moby-Dick</td>
+                        <td>Herman Melville</td>
+                        <td>Adventure</td>
+                        <td>1851</td>
+                        <td>Take it</td>
+                    </tr>
+                    <tr>
+                        <td>The Green Mile</td>
+                        <td>Stephen King</td>
+                        <td>Mystery</td>
+                        <td>1996</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Angela's Ashes</td>
+                        <td>Frank McCourt</td>
+                        <td>Biography</td>
+                        <td>1996</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Into the Wild</td>
+                        <td>Jon Krakauer</td>
+                        <td>Adventure</td>
+                        <td>1996</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Notebook</td>
+                        <td>Nicholas Sparks</td>
+                        <td>Romance</td>
+                        <td>1996</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Runaway Jury</td>
+                        <td>John Grisham</td>
+                        <td>Legal Thriller</td>
+                        <td>1996</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Celestine Prophecy</td>
+                        <td>James Redfield</td>
+                        <td>Spirituality</td>
+                        <td>1996</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Rainmaker</td>
+                        <td>John Grisham</td>
+                        <td>Legal Thriller</td>
+                        <td>1996</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Ghost</td>
+                        <td>Robert Harris</td>
+                        <td>Thriller</td>
+                        <td>1996</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Primary Colors</td>
+                        <td>Anonymous</td>
+                        <td>Satire</td>
+                        <td>1996</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Veronika Decides to Die</td>
+                        <td>Paulo Coelho</td>
+                        <td>Fiction</td>
+                        <td>1996</td>
+                        <td>Take it</td>
+                    </tr>
+                    <tr>
+                        <td>Brave New World</td>
+                        <td>Aldous Huxley</td>
+                        <td>Science Fiction</td>
+                        <td>1932</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Crime and Punishment</td>
+                        <td>Fyodor Dostoevsky</td>
+                        <td>Psychological</td>
+                        <td>1866</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Odyssey</td>
+                        <td>Homer</td>
+                        <td>Mythology</td>
+                        <td>8th Century BCE</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Adventures of Huckleberry Finn</td>
+                        <td>Mark Twain</td>
+                        <td>Adventure</td>
+                        <td>1884</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Great Expectations</td>
+                        <td>Charles Dickens</td>
+                        <td>Classic</td>
+                        <td>1861</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Hobbit</td>
+                        <td>J.R.R. Tolkien</td>
+                        <td>Fantasy</td>
+                        <td>1937</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>One Hundred Years of Solitude</td>
+                        <td>Gabriel García Márquez</td>
+                        <td>Magic Realism</td>
+                        <td>1967</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Anna Karenina</td>
+                        <td>Leo Tolstoy</td>
+                        <td>Classic</td>
+                        <td>1877</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Divine Comedy</td>
+                        <td>Dante Alighieri</td>
+                        <td>Epic Poetry</td>
+                        <td>1308-1320</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Picture of Dorian Gray</td>
+                        <td>Oscar Wilde</td>
+                        <td>Classic</td>
+                        <td>1890</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Frankenstein</td>
+                        <td>Mary Shelley</td>
+                        <td>Horror</td>
+                        <td>1818</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Canterbury Tales</td>
+                        <td>Geoffrey Chaucer</td>
+                        <td>Medieval</td>
+                        <td>1387-1400</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Iliad</td>
+                        <td>Homer</td>
+                        <td>Mythology</td>
+                        <td>8th Century BCE</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Brothers Karamazov</td>
+                        <td>Fyodor Dostoevsky</td>
+                        <td>Philosophical</td>
+                        <td>1880</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Grapes of Wrath</td>
+                        <td>John Steinbeck</td>
+                        <td>Historical</td>
+                        <td>1939</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Count of Monte Cristo</td>
+                        <td>Alexandre Dumas</td>
+                        <td>Adventure</td>
+                        <td>1844-1846</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Les Misérables</td>
+                        <td>Victor Hugo</td>
+                        <td>Historical</td>
+                        <td>1862</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Don Quixote</td>
+                        <td>Miguel de Cervantes</td>
+                        <td>Adventure</td>
+                        <td>1605-1615</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Hobbit</td>
+                        <td>J.R.R. Tolkien</td>
+                        <td>Fantasy</td>
+                        <td>1937</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>War and Peace</td>
+                        <td>Leo Tolstoy</td>
+                        <td>Historical</td>
+                        <td>1869</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Heart of Darkness</td>
+                        <td>Joseph Conrad</td>
+                        <td>Modernist</td>
+                        <td>1899</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Sun Also Rises</td>
+                        <td>Ernest Hemingway</td>
+                        <td>Lost Generation</td>
+                        <td>1926</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Beloved</td>
+                        <td>Toni Morrison</td>
+                        <td>Historical</td>
+                        <td>1987</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Alice's Adventures in Wonderland</td>
+                        <td>Lewis Carroll</td>
+                        <td>Fantasy</td>
+                        <td>1865</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Scarlet Letter</td>
+                        <td>Nathaniel Hawthorne</td>
+                        <td>Classic</td>
+                        <td>1850</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Animal Farm</td>
+                        <td>George Orwell</td>
+                        <td>Satire</td>
+                        <td>1945</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Lord of the Flies</td>
+                        <td>William Golding</td>
+                        <td>Allegory</td>
+                        <td>1954</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Wuthering Heights</td>
+                        <td>Emily Brontë</td>
+                        <td>Gothic</td>
+                        <td>1847</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Handmaid's Tale</td>
+                        <td>Margaret Atwood</td>
+                        <td>Dystopian</td>
+                        <td>1985</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Old Man and the Sea</td>
+                        <td>Ernest Hemingway</td>
+                        <td>Novella</td>
+                        <td>1952</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Of Mice and Men</td>
+                        <td>John Steinbeck</td>
+                        <td>Classic</td>
+                        <td>1937</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Lord of the Rings</td>
+                        <td>J.R.R. Tolkien</td>
+                        <td>Fantasy</td>
+                        <td>1955</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>The Shining</td>
+                        <td>Stephen King</td>
+                        <td>Horror</td>
+                        <td>1977</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>A Tale of Two Cities</td>
+                        <td>Charles Dickens</td>
+                        <td>Historical</td>
+                        <td>1859</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>East of Eden</td>
+                        <td>John Steinbeck</td>
+                        <td>Historical</td>
+                        <td>1952</td>
+                        <td>Take it</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Harry Potter and the Sorcerer's Stone</td>
+                        <td>J.K. Rowling</td>
+                        <td>Fantasy</td>
+                        <td>1997</td>
+                        <td>Take it</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <script>
+                window.onload = () => {
+                    console.log(document.querySelector("#book-table > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+                };
+                getUniqueValuesFromColumn();
+                document.addEventListener("DOMContentLoaded", function() {
+                const rowsPerScroll = 15;
+                const tableBody = document.querySelector("#book-table > tbody");
+                const rows = Array.from(tableBody.getElementsByTagName("tr"));
+                let start = 0;
+                let end = Math.min(rowsPerScroll, rows.length);
+                function showVisibleRows() {
+                    for (let i = start; i < end; i++) {
+                        rows[i].style.display = "table-row";
+                    }
+                }
+                function handleScroll() {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                    start = end;
+                    end = Math.min(end + rowsPerScroll, rows.length);
+                    if (start >= rows.length) {
+                    window.removeEventListener("scroll", handleScroll);
+                    return;
+                }
+
+                    // Show the next set of visible rows
+                    showVisibleRows();
+                    console.log("Loaded rows:", start, "-", end);
+                }
+                }
+
+                // Initially hide all rows except the first set of visible rows
+                for (let i = rowsPerScroll; i < rows.length; i++) {
+                rows[i].style.display = "none";
+                }
+
+                showVisibleRows();
+                console.log("Loaded rows:", start, "-", end);
+                window.addEventListener("scroll", handleScroll);
+            });
+                </script>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i> Phone: 123-456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: 123 Library Street, City, Country</p>
+                    <p><i class="fas fa-envelope"></i> Email: info@library.com</p>
+                </div>
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Library Management System. All rights reserved.</p>
+            </div>
+        </footer>
+        
+    </section>
+</body>
+</html>

@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+#interface {
+    flex: 1;
+    padding: 20px;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 3px solid rgb(98, 98, 201);
+    background-color: #fff; /* Set your desired background color */
+    z-index: 9999; /* Make sure it's on top of other elements */
+  }
+  
+  
+
+.navigation .search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid rgb(181, 182, 199);
+    padding: 5px;
+}
+
+.navigation .search input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.navigation .profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navigation .profile i {
+    margin-right: 10px;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.navigation .profile img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.navigation .logo {
+    margin-right: 100px;
+}
+
+.i-name
+{
+    color: #444a53;
+    padding: 60px 30px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.values
+{
+    padding: 30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.values .val-box
+{
+    background-color: rgb(164, 209, 224);
+    width: 235px;
+    padding: 16px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+#spl
+{
+    font-weight: 800;
+    background-color: rgb(57, 144, 171);
+    width: 250px;
+    padding: 16px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.values .val-box i
+{
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.values .val-box:nth-child(1) i
+{
+    background-color: rgb(128, 149, 162);;
+}
+.values .val-box:nth-child(2) i
+{
+    background-color: rgb(128, 149, 162);;
+}
+.values .val-box:nth-child(3) i
+{
+    background-color: rgb(128, 149, 162);;
+}
+.values .val-box:nth-child(4) i
+{
+    background-color: rgb(128, 149, 162);;
+}
+
+
+.values .val-box h3
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.values .val-box span
+{
+    font-size: 15px;
+    color: #444a53;
+}
+
+.values #spl span
+{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.board
+{
+    width: 96%;
+    margin: 40px 0px 30px 30px;
+    overflow: auto;
+    border-radius: 8px;
+    background-color: azure;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.board th
+{
+    padding: 1rem;
+    font-weight: 600;
+    font-size:larger;
+    text-align: center;
+    background-color: rgb(89, 171, 171);
+}
+
+
+.board img
+{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.board h5
+{
+    font-weight: 400;
+    font-size: large;
+    color: rgb(8, 8, 7);
+}
+
+
+.board .books
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+tr
+{
+    border-bottom: 1px solid rgb(26, 26, 50);
+}
+
+thead td
+{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: rgb(148, 187, 194);
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+tbody tr td
+{
+    padding: 10px 15px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #f2f2f2;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contact-info,
+  .social-media {
+    flex-basis: 50%;
+  }
+  
+  .contact-info h3,
+  .social-media h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 14px;
+  }
+  
+  .contact-info p,
+  .social-media ul {
+    margin-bottom: 10px;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  
+  .social-links a {
+    color: #555;
+    font-size: 20px;
+  }
+  
+  .footer-bottom {
+    background-color: #ddd;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 769px) 
+{
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    #interface
+    {
+        width: 100%;
+        margin-left: 0px;
+        display: inline-block;
+    }
+
+    #interface .navigation
+    {
+        width: 100%;
+    }
+
+    .values {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .values .val-box
+    {
+        padding: 16px 20px;
+        margin: 10px 20px 10px 0;
+    }
+
+    .board
+    {
+        width: 92%;
+        margin: 0;
+        padding: 10px;
+        overflow-x: auto;
+    }
+    table
+    {
+        width: 100%;
+        border-collapse: collapse;
+    }
+}
